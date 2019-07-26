@@ -109,6 +109,10 @@ func expandStringSlice(s []interface{}) []string {
 	return result
 }
 
+func FlattenMetadata(meta metav1.ObjectMeta, d *schema.ResourceData, metaPrefix ...string) []interface{} {
+	return flattenMetadata(meta, d, metaPrefix...)
+}
+
 func flattenMetadata(meta metav1.ObjectMeta, d *schema.ResourceData, metaPrefix ...string) []interface{} {
 	m := make(map[string]interface{})
 	prefix := ""

@@ -6,6 +6,10 @@ import (
 	"k8s.io/apimachinery/pkg/util/intstr"
 )
 
+func FlattenDaemonSetSpec(in appsv1.DaemonSetSpec, d *schema.ResourceData) ([]interface{}, error) {
+	return flattenDaemonSetSpec(in, d)
+}
+
 func flattenDaemonSetSpec(in appsv1.DaemonSetSpec, d *schema.ResourceData) ([]interface{}, error) {
 	att := make(map[string]interface{})
 	att["min_ready_seconds"] = in.MinReadySeconds
