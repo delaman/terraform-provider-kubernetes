@@ -1,4 +1,4 @@
-module github.com/terraform-providers/terraform-provider-kubernetes
+module github.com/delaman/terraform-provider-kubernetes
 
 require (
 	contrib.go.opencensus.io/exporter/ocagent v0.5.0 // indirect
