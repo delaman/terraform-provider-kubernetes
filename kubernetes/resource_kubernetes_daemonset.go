@@ -16,7 +16,7 @@ import (
 	"k8s.io/client-go/kubernetes"
 )
 
-func resourceKubernetesDaemonSet() *schema.Resource {
+func ResourceKubernetesDaemonSet() *schema.Resource {
 	return &schema.Resource{
 		Create: resourceKubernetesDaemonSetCreate,
 		Read:   resourceKubernetesDaemonSetRead,
